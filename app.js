@@ -1,4 +1,4 @@
-// Configuració de Firebase - SUBSTITUEIX AMB LES TEVES CREDENCIALS
+// Configuració de Firebase
 const firebaseConfig = {
     apiKey: "AIzaSyCxj-aXpggTTMOpXnWmVX1k8ePkRVP9jZQ",
     authDomain: "todo-firebase-6c6ae.firebaseapp.com",
@@ -9,9 +9,9 @@ const firebaseConfig = {
     measurementId: "G-NNMSHTYGXS"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+// Inicialitzar Firebase (versió compat)
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
 
 // Referències
 const formNota = document.getElementById('form-nota');
