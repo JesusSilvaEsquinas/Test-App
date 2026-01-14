@@ -1,11 +1,4 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// Configuració de Firebase
 const firebaseConfig = {
     apiKey: "AIzaSyCxj-aXpggTTMOpXnWmVX1k8ePkRVP9jZQ",
     authDomain: "todo-firebase-6c6ae.firebaseapp.com",
@@ -16,9 +9,9 @@ const firebaseConfig = {
     measurementId: "G-NNMSHTYGXS"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+// Inicialitzar Firebase
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
 
 // Referències
 const formNota = document.getElementById('form-nota');
